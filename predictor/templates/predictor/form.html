@@ -1,0 +1,13 @@
+<html>
+  <body>
+    <h2>User Story Point Prediction</h2>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Predict</button>
+    </form>
+    {% if prediction %}
+      <h3>Predicted Story Points: {{ prediction }}</h3>
+    {% endif %}
+  </body>
+</html>
