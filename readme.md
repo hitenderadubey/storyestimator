@@ -15,3 +15,13 @@ json
   "Dependencies": 2,
   "Priority": 2
 }
+
+set up:
+git clone <repo-url>
+cd userstory-predictor
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
+python manage.py migrate
+python manage.py runserver
